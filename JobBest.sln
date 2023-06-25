@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobBest", "JobBest\JobBest.csproj", "{69EF72C4-B19C-401D-B365-8C72E1B01FFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69EF72C4-B19C-401D-B365-8C72E1B01FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69EF72C4-B19C-401D-B365-8C72E1B01FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69EF72C4-B19C-401D-B365-8C72E1B01FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69EF72C4-B19C-401D-B365-8C72E1B01FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D821547E-6546-47E2-A4EF-2F7A89AB6AA2}
+	EndGlobalSection
+EndGlobal

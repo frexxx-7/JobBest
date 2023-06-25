@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69EF72C4-B19C-401D-B365-8C72E1B01FFD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JobBest</RootNamespace>
+    <AssemblyName>JobBest</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.2.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.2.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.2, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.2\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.32.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.8\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppPage.Designer.cs">
+      <DependentUpon>AppPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\BLL.cs" />
+    <Compile Include="Classes\Comments\CommentsBLL.cs" />
+    <Compile Include="Classes\Comments\DBFuncComments.cs" />
+    <Compile Include="Classes\DB.cs" />
+    <Compile Include="Classes\DBFunc.cs" />
+    <Compile Include="Classes\Messages\DBFuncMessages.cs" />
+    <Compile Include="Classes\Messages\MessagesBLL.cs" />
+    <Compile Include="Classes\Responses\DBFuncResponses.cs" />
+    <Compile Include="Classes\Responses\ResponsesBLL.cs" />
+    <Compile Include="Controls\ChatsControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ChatsControls.Designer.cs">
+      <DependentUpon>ChatsControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CommentsControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CommentsControls.Designer.cs">
+      <DependentUpon>CommentsControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JobsControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\JobsControls.Designer.cs">
+      <DependentUpon>JobsControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MessageControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MessageControls.Designer.cs">
+      <DependentUpon>MessageControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ResponsesControls.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ResponsesControls.Designer.cs">
+      <DependentUpon>ResponsesControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpForms\AddComments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpForms\AddComments.Designer.cs">
+      <DependentUpon>AddComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobsForms\AddJobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobsForms\AddJobs.Designer.cs">
+      <DependentUpon>AddJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageForms\Messages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageForms\Messages.Designer.cs">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobsForms\ViewImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobsForms\ViewImage.Designer.cs">
+      <DependentUpon>ViewImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobsForms\ViewJobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobsForms\ViewJobs.Designer.cs">
+      <DependentUpon>ViewJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageForms\Lenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageForms\Lenta.Designer.cs">
+      <DependentUpon>Lenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageForms\Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageForms\Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageForms\YouJobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageForms\YouJobs.Designer.cs">
+      <DependentUpon>YouJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AppPage.resx">
+      <DependentUpon>AppPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ChatsControls.resx">
+      <DependentUpon>ChatsControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CommentsControls.resx">
+      <DependentUpon>CommentsControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\JobsControls.resx">
+      <DependentUpon>JobsControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MessageControls.resx">
+      <DependentUpon>MessageControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ResponsesControls.resx">
+      <DependentUpon>ResponsesControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpForms\AddComments.resx">
+      <DependentUpon>AddComments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobsForms\AddJobs.resx">
+      <DependentUpon>AddJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageForms\Messages.resx">
+      <DependentUpon>Messages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobsForms\ViewImage.resx">
+      <DependentUpon>ViewImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobsForms\ViewJobs.resx">
+      <DependentUpon>ViewJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageForms\Lenta.resx">
+      <DependentUpon>Lenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageForms\Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageForms\YouJobs.resx">
+      <DependentUpon>YouJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\backimage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\JobBest.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
